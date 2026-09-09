@@ -1,0 +1,34 @@
+Package: BOLDNODE
+Title: Search and Explore BOLD Data Packages Efficiently
+Version: 1.0.0
+Authors@R: c(
+    person("Sameer", "Padhye", , "spadhye@uoguelph.ca", role = c("aut", "cre")),
+    person(c("Spencer", "K."), "Monckton", , "smonckto@uoguelph.ca", role = "aut"),
+    person("Dirk", "Steinke", , "dsteinke@uoguelph.ca", role = "ctb"),
+    person("Jireh", "Agda", , "agdaj@uoguelph.ca", role = "ctb"),
+    person(c("Teresita", "M."), "Porter", , "porter01@uoguelph.ca", role = "ctb")
+  )
+Description: Provides efficient tools for exploring and transforming
+    the Barcode of Life Data Systems (BOLD) data packages on local
+    machines. It enables fast local querying of the data packages without 
+    relying on live API calls. Results can be easily converted into formats
+    compatible with widely used R packages and third party tools.
+License: CC BY 4.0
+Encoding: UTF-8
+Imports: data.table, DBI, dbplyr, dplyr, duckdb, progressr, rlang, sf,
+        tidyr
+Suggests: ape, Biostrings, BiocManager, knitr, rmarkdown, DT, ggplot2,
+        ggrepel, maps, muscle, pak, phangorn, tibble, vegan
+Config/roxygen2/version: 8.0.0
+RoxygenNote: 7.3.3
+VignetteBuilder: knitr
+NeedsCompilation: no
+Packaged: 2026-08-27 19:13:48 UTC; sameerpadhye
+Author: Sameer Padhye [aut, cre],
+  Spencer K. Monckton [aut],
+  Dirk Steinke [ctb],
+  Jireh Agda [ctb],
+  Teresita M. Porter [ctb]
+Maintainer: Sameer Padhye <spadhye@uoguelph.ca>
+Repository: CRAN
+Date/Publication: 2026-09-09 16:30:31 UTC
