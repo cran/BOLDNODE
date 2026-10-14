@@ -211,7 +211,7 @@ DT::datatable(
   )
 )
 
-## ----DNAStringSet-object,message=F,warning=F----------------------------------
+## ----DNAStringSet-object,message=F,warning=F,eval=requireNamespace("Biostrings",quietly=TRUE)----
 library(Biostrings)
 # Filter for genus Clytus
 clytus_search <- bold_parquet_search(
@@ -229,7 +229,7 @@ clytus_data <- bcdm_to_dnastringset(clytus_search,
 )
 head(clytus_data, 3)
 
-## ----basepair-freq,message=F,warning=F----------------------------------------
+## ----basepair-freq,message=F,warning=F,eval=requireNamespace("Biostrings",quietly=TRUE)----
 library(Biostrings)
 # Count bases across all sequences
 base_counts <- colSums(alphabetFrequency(clytus_data, baseOnly = TRUE))
@@ -237,12 +237,12 @@ base_counts <- colSums(alphabetFrequency(clytus_data, baseOnly = TRUE))
 base_props <- base_counts / sum(base_counts)
 base_props
 
-## ----sequence_alignment,message=F,warning=F-----------------------------------
+## ----sequence_alignment,message=F,warning=F,eval=requireNamespace("muscle",quietly=TRUE)----
 library(Biostrings)
 library(muscle)
 alignment_muscle <- muscle(clytus_data)
 
-## ----NJ tree,message=F,warning=F,fig.width=12, fig.height=12, dpi=300---------
+## ----NJ tree,message=F,warning=F,eval=requireNamespace("muscle",quietly=TRUE),fig.width=12, fig.height=12, dpi=300----
 library(ape)
 library(phangorn)
 # Convert the alignment to DNABin
